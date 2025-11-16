@@ -224,12 +224,6 @@ curl -X POST "http://localhost:8000/model/update" \
   }'
 ```
 
-## Performance
-
-### Classification Metrics (Ukraine Week Dataset)
-- **Average Latency**: 50-200ms per article (CPU)
-- **Average Latency**: 10-30ms per article (GPU)
-
 ## Design Decisions
 
 ### 1. **Zero-Shot Over Fine-Tuning**
@@ -395,5 +389,3 @@ If `/breaking` returns empty results:
 
 2. **Test actual scores** - Use `/classify` endpoint to see real scores
    curl -X POST "http://localhost:8000/classify?title=Test&description=Test"
-   
-```
