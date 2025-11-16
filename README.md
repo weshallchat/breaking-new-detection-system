@@ -383,9 +383,13 @@ python3 -c "from transformers import pipeline; pipeline('zero-shot-classificatio
 If `/breaking` returns empty results:
 
 1. **Check threshold** - Default threshold is 0.5
+```bash
    curl -X POST "http://localhost:8000/model/update" \
      -H "Content-Type: application/json" \
      -d '{"breaking_threshold": 0.5}'
+```
 
 2. **Test actual scores** - Use `/classify` endpoint to see real scores
+```bash
    curl -X POST "http://localhost:8000/classify?title=Test&description=Test"
+```
